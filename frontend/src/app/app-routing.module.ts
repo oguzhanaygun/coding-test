@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { OrderlistComponent } from './orderlist/orderlist.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'orders', component: OrderlistComponent },
+  { path: '', redirectTo: '/orders', pathMatch: 'full' },
+  { path: '**', component: PagenotfoundComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
