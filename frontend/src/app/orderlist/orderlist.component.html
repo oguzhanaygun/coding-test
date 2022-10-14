@@ -1,2 +1,22 @@
-<h1>Order list!</h1>
-<p>Get your crisis here</p>
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" >Customer Name</th>
+      <th scope="col" >item Count</th>
+      <th scope="col" >Total</th>
+      <th scope="col" >Detail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+      <th scope="row">{{ order.id }}</th>
+      <td>
+        {{ getCustomersName(order['customer-id']) }}
+      </td>
+      <td>{{ order.items.length | number }}</td>
+      <td>{{ order.total | number }}</td>
+      <td><a class="btn btn-primary" [routerLink]="['order', order.id, 'detail']" role="button">Go to Detail</a></td>
+    </tr>
+    </tbody>
+</table>
