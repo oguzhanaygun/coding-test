@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class CustomerService {
   private dataUrl = 'assets/data/customers.json';
-  private customers:any;
+  private customers!: Map<number, Customer>;
   constructor(private http: HttpClient) {
     this.getCustomers().subscribe({
       next: (customers) => {
-        this.customers = new Map<number, Object>(customers.map(c => [c.id, c]));
+        this.customers = new Map<number, Customer>(customers.map(c => [c.id, c]))!;
         console.log(this.customers)
       },
       error: (error) => {
