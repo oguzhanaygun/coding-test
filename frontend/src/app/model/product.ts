@@ -1,6 +1,6 @@
 export interface Product {
     id:String;
-    descriptin:String;
+    description:String;
     category:number;
     price:number;
 }

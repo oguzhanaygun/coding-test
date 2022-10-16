@@ -1,6 +1,6 @@
 export interface Item {
-    productId: string;
+    "product-id": string;
     quantity: string;
-    unitPrice: string;
+    "unit-price": string;
     total: string;
 }
