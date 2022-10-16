@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../service/order.service';
 import { Order } from '../model/order';
-import { Customer } from '../model/customer';
 import { CustomerService } from '../service/customer.service';
 
 @Component({
@@ -11,7 +10,6 @@ import { CustomerService } from '../service/customer.service';
 })
 export class OrderlistComponent implements OnInit {
   orders : Array<Order> = [];
-  customers : any;
   loading: boolean = true;
   hasErr:boolean = false;
   constructor(private orderService: OrderService, private customerService:CustomerService) { }
@@ -37,6 +35,6 @@ export class OrderlistComponent implements OnInit {
   }
 
    getCustomersName(id:number) {
-    return this.customerService.getCustomer(id).name;
+    return this.customerService.getCustomer(id)!.name;
   }
 }

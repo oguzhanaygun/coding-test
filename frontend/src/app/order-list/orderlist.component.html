@@ -16,7 +16,7 @@
       </td>
       <td>{{ order.items.length | number }}</td>
       <td>{{ order.total | number }}</td>
-      <td><a class="btn btn-primary" [routerLink]="['order', order.id, 'detail']" role="button">Go to Detail</a></td>
+      <td><a class="btn btn-primary" [routerLink]="['/order', order.id, 'detail']" role="button">Go to Detail</a></td>
     </tr>
     </tbody>
 </table>
