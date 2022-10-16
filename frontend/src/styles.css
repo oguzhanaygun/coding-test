@@ -1,3 +1,9 @@
 body { 
     padding-top: 65px; 
 }
+
+.newItem > .card{
+     
+    border: dashed 1px rgb(0, 0, 0)!important;
+    opacity: 0.8;
+}

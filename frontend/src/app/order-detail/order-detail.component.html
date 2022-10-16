@@ -1,0 +1,13 @@
+<div class="row" *ngIf="order">
+    <div class="col-sm-12">
+        <h1>Detail of Order : {{orderId}}</h1>
+        <button type="button" (click)="placeOrder()" class="btn btn-success" >Place Order</button>
+        <button type="button" (click)="deleteOrder()" class="btn btn-danger" style="margin-left: 10px;">delete Order</button>
+    </div>
+</div>
+<div class="row" style="margin-top: 20px;" *ngIf="order">
+    <div class="col-md-4 col-sm-12 col-lg-2" *ngFor="let item of order.items">
+        <app-product (deleteItemEvent)="deleteItem($event)" (updateItemEvent)="updateItem($event)" [item]="item" header="Item"></app-product>
+    </div>
+    <app-product (addItemEvent)="addItem($event)" class="col-md-4 col-sm-12 col-lg-2" header="New Item"></app-product>
+</div>
