@@ -1,0 +1,10 @@
+<div *ngIf='!editMode' (click)='editMode=true' class='cell'>  {{textContent + ":" + data }}</div>
+
+
+  <div *ngIf='editMode' style="flex-wrap: nowrap;" class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" >{{textContent}}</span>
+    </div>
+    <input   type="number" class="form-control"  aria-label="Default" 
+    (focusout)="onFocusOut()"  [(ngModel)]='data' class='cellInput' (keydown.enter)='looseFocus($event)'  type='text'  (focusout)="editMode=false">
+  </div>
