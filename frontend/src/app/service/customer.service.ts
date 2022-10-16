@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Customer } from '../model/customer';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
-  private dataUrl = 'assets/data/customers.json';
+  private dataUrl = environment.customerServiceUrl;
   private customers!: Map<number, Customer>;
   constructor(private http: HttpClient) {
     this.getCustomers().subscribe({
