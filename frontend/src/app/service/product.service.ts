@@ -8,9 +8,28 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
   private dataUrl = 'assets/data/products.json';
-  constructor(private http: HttpClient) { }
+  private products!:Map<any, Product>;
+  constructor(private http: HttpClient) { 
+    this.getProducts().subscribe({
+      next: (products) => {
+        this.products = new Map<any, Product>(products.map(p => [p.id,p]));
+      },
+      error: (error) => {
+        console.log("Can not get products")
+        console.log(error);
+      },
+      complete: () => {
+        console.log('Request completed33');
+      }
+    });
+  }
 
   getProducts():Observable<Product[]>{
     return this.http.get<Product[]>(this.dataUrl);
   }
+
+  getProduct(id:String) {
+    return this.products.get(id);
+  }
+  
 }
