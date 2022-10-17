@@ -9,6 +9,7 @@ export class InlineEditComponent implements OnInit {
   @Input() data!: String;
   @Input() textContent!: String;
   @Output() focusOut: EventEmitter<String> = new EventEmitter<String>();
+  @Input()
   editMode = false;
   constructor() {}
 
