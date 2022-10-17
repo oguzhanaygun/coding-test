@@ -10,7 +10,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let order of orders">
-      <th scope="row">{{ order.id }}</th>
+      <td scope="row">{{ order.id }}</td>
       <td>
         {{ getCustomersName(order['customer-id']) }}
       </td>
