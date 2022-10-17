@@ -3,23 +3,23 @@
         {{header}}
     </div>
     <ul class="list-group list-group-flush">
-        <li *ngIf="item['product-id'] != '0' && product" class="list-group-item">Name: {{product.description}}</li>
-        <li *ngIf="item['product-id'] == '0'" class="list-group-item">
+        <li *ngIf="item['product-id'] != '0' && product && !newItem" class="list-group-item">Name: {{product.description}}</li>
+        <li   *ngIf="newItem" class="list-group-item">
             <select class="form-select" [(ngModel)]="item['product-id']" (change)="productSelect()">
                 <option value="0" selected>Please Select Product</option>
                 <option *ngFor="let p of products | keyvalue" [value]="p.value.id">{{p.value.description}}</option>
             </select>
         </li>
         <li class="list-group-item">
-            <app-inline-edit textContent="quantity" [data]='item.quantity' (focusOut)='saveQuentity($event)'>
+            <app-inline-edit textContent="quantity" [editMode]="newItem" [data]='item.quantity' (focusOut)='saveQuentity($event)'>
             </app-inline-edit>
         </li>
         <li class="list-group-item">
-            <app-inline-edit textContent="Unit Price" [data]="item['unit-price']" (focusOut)='savePrice($event)'>
+            <app-inline-edit textContent="Unit Price" [editMode]="newItem" [data]="item['unit-price']" (focusOut)='savePrice($event)'>
             </app-inline-edit>
         </li>
         <li class="list-group-item">
-            <app-inline-edit textContent="Total" [data]="item.total" (focusOut)='saveTotal($event)'></app-inline-edit>
+            <app-inline-edit textContent="Total" [editMode]="newItem" [data]="item.total" (focusOut)='saveTotal($event)'></app-inline-edit>
         </li>
         <li class="list-group-item" style="text-align: center;">
             <button class="btn btn-danger" [disabled]="newItem" (click)="deleteItem()">
