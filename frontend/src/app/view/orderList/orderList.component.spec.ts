@@ -1,14 +1,14 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { CustomerService } from '../service/customer.service';
-import { OrderService } from '../service/order.service';
+import { CustomerService } from '../../service/customer.service';
+import { OrderService } from '../../service/order.service';
 
-import { OrderlistComponent } from './orderlist.component';
+import { OrderListComponent } from './orderList.component';
 
-describe('OrderlistComponent', () => {
-  let component: OrderlistComponent;
-  let fixture: ComponentFixture<OrderlistComponent>;
+describe('OrderListComponent', () => {
+  let component: OrderListComponent;
+  let fixture: ComponentFixture<OrderListComponent>;
   let mockOrderService;
   let mockCustomerService: { getCustomer: { (arg0: number): any; (arg0: number): any; and: any; }; };
   beforeEach(async () => {
@@ -37,11 +37,11 @@ describe('OrderlistComponent', () => {
 
     await TestBed.configureTestingModule({
       providers: [HttpClient, HttpHandler, { provide: CustomerService, useValue: mockCustomerService }, { provide: OrderService, useValue: mockOrderService }],
-      declarations: [OrderlistComponent]
+      declarations: [OrderListComponent]
     })
       .compileComponents();
 
-    fixture = TestBed.createComponent(OrderlistComponent);
+    fixture = TestBed.createComponent(OrderListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

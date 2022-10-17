@@ -1,15 +1,14 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Item } from '../model/item';
-import { Product } from '../model/product';
-import { ProductService } from '../service/product.service';
-
+import { Item } from 'src/app/model/item';
+import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  selector: 'app-order-item',
+  templateUrl: './orderItem.component.html',
+  styleUrls: ['./orderItem.component.css']
 })
-export class ProductComponent implements OnInit {
+export class OrderItemComponent implements OnInit {
   @Input()
   item!: Item;
   @Input()

@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { ProductService } from '../service/product.service';
-import { Product } from '../model/product';
-import { Order } from '../model/order'
-import { OrderService } from '../service/order.service';
-import { Item } from '../model/item';
+import { ProductService } from '../../service/product.service';
+import { Product } from '../../model/product';
+import { Order } from '../../model/order'
+import { OrderService } from '../../service/order.service';
+import { Item } from '../../model/item';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-order-detail',
-  templateUrl: './order-detail.component.html',
-  styleUrls: ['./order-detail.component.css']
+  templateUrl: './orderDetail.component.html',
+  styleUrls: ['./orderDetail.component.css']
 })
 export class OrderDetailComponent implements OnInit {
 

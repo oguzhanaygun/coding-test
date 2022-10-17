@@ -7,7 +7,7 @@
 </div>
 <div class="row" style="margin-top: 20px;" *ngIf="order">
     <div class="col-md-4 col-sm-12 col-lg-2" *ngFor="let item of order.items">
-        <app-product (deleteItemEvent)="deleteItem($event)" (updateItemEvent)="updateItem($event)" [item]="item" header="Item"></app-product>
+        <app-order-item (deleteItemEvent)="deleteItem($event)" (updateItemEvent)="updateItem($event)" [item]="item" header="Item"></app-order-item>
     </div>
-    <app-product (addItemEvent)="addItem($event)" class="col-md-4 col-sm-12 col-lg-2" header="New Item"></app-product>
+    <app-order-item  (addItemEvent)="addItem($event)" class="col-md-4 col-sm-12 col-lg-2" header="New Item"></app-order-item>
 </div>

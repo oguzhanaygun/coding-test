@@ -3,11 +3,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Item } from '../model/item';
 import { ProductService } from '../service/product.service';
 
-import { ProductComponent } from './product.component';
+import { OrderItemComponent } from './orderItem.component';
 
 describe('ProductComponent', () => {
-  let component: ProductComponent;
-  let fixture: ComponentFixture<ProductComponent>;
+  let component: OrderItemComponent;
+  let fixture: ComponentFixture<OrderItemComponent>;
   let item:Item = {
     'product-id': '0',
     quantity: '0',
@@ -18,11 +18,11 @@ describe('ProductComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers: [HttpClient,HttpHandler,ProductService],
-      declarations: [ ProductComponent ]
+      declarations: [ OrderItemComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProductComponent);
+    fixture = TestBed.createComponent(OrderItemComponent);
     component = fixture.componentInstance;
     component.item = item;
     fixture.detectChanges();

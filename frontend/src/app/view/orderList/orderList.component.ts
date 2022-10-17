@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderService } from '../service/order.service';
-import { Order } from '../model/order';
-import { CustomerService } from '../service/customer.service';
+import { OrderService } from '../../service/order.service';
+import { Order } from '../../model/order';
+import { CustomerService } from '../../service/customer.service';
 
 @Component({
   selector: 'app-orderlist',
   templateUrl: './orderlist.component.html',
   styleUrls: ['./orderlist.component.css']
 })
-export class OrderlistComponent implements OnInit {
+export class OrderListComponent implements OnInit {
   orders : Array<Order> = [];
   loading: boolean = true;
   hasErr:boolean = false;

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { OrderlistComponent } from './order-list/orderlist.component';
-import { OrderDetailComponent } from './order-detail/order-detail.component';
+import { PagenotfoundComponent } from './view/pagenotfound/pagenotfound.component';
+import { OrderListComponent } from './view/orderList/orderList.component';
+import { OrderDetailComponent } from './view/orderDetail/orderDetail.component';
 
 const routes: Routes = [
-  { path: 'orders', component: OrderlistComponent },
+  { path: 'orders', component: OrderListComponent },
   { path: 'order/:id/detail', component: OrderDetailComponent },
   { path: '', redirectTo: '/orders', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent }

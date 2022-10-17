@@ -2,8 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-inline-edit',
-  templateUrl: './inline-edit.component.html',
-  styleUrls: ['./inline-edit.component.css'],
+  templateUrl: './inlineEdit.component.html',
+  styleUrls: ['./inlineEdit.component.css'],
 })
 export class InlineEditComponent implements OnInit {
   @Input() data!: String;
