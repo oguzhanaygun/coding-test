@@ -5,7 +5,7 @@ import { Product } from '../model/product';
 import { Order } from '../model/order'
 import { OrderService } from '../service/order.service';
 import { Item } from '../model/item';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-order-detail',
