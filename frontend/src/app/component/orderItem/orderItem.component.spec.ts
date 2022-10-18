@@ -1,7 +1,8 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Item } from '../model/item';
-import { ProductService } from '../service/product.service';
+import { Item } from 'src/app/model/item';
+import { ProductService } from 'src/app/service/product.service';
+
 
 import { OrderItemComponent } from './orderItem.component';
 
