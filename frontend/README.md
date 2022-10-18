@@ -1,4 +1,4 @@
-# Coding Test Ordering Frontend App
+# Coding Test Ordering  App
 
 An angular application written with typescript to manege orders.
 
