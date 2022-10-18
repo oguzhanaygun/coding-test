@@ -5,8 +5,8 @@ import { CustomerService } from '../../service/customer.service';
 
 @Component({
   selector: 'app-orderlist',
-  templateUrl: './orderlist.component.html',
-  styleUrls: ['./orderlist.component.css']
+  templateUrl: './orderList.component.html',
+  styleUrls: ['./orderList.component.css']
 })
 export class OrderListComponent implements OnInit {
   orders : Array<Order> = [];
