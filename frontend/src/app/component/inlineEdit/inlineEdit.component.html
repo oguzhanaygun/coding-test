@@ -5,6 +5,6 @@
     <div class="input-group-prepend">
       <span class="input-group-text" >{{textContent}}</span>
     </div>
-    <input   type="number" class="form-control"  aria-label="Default" 
+    <input  style="max-width:60%;" type="number" class="form-control"  aria-label="Default" 
     (focusout)="onFocusOut()"  [(ngModel)]='data' class='cellInput' (keydown.enter)='looseFocus($event)'  type='text'  (focusout)="editMode=false">
   </div>
